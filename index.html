@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+     
+    <div class="wrapper">
+        <div class="container">
+            <div class="banner">
+                <div class="left-section">
+                    <div class="logo"><span><img src="img/one.png" alt="" class="logo-s"></span><!--<span class="spl">L</span>una --></div>
+                    <div class="song-details">
+                        <div class="song-img">
+                            <img src="" class="music-banner" alt="">
+                        </div>
+                        <div class="song-detail">
+                            <p class="song-name">Let Me Down Slowly</p>
+                            <p class="artist-name">Song by Alec Benjamin
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="top">
+                       <!-- <p class="song-list"><span class="f-orange">S</span>earch <span class="f-orange">S</span>ongs</p>-->
+                        <div class="form">
+                            <input type="text" onkeyup="circle()" id="Search-Bar" placeholder="search here" class="Search-Bar">
+                            <span class="searchicon"><i class="fa fa-search"></i></span>
+                        </div>
+
+                    </div>
+                    <div class="ul-list">
+
+                        <ul>
+                               <!--
+                            <li class="product">
+                                <div class="value">
+                                <div class="music-time">
+                                    <h5>weweweKaathuvaakula Rendu Kaadhal Tamil mp3 song</h5>
+                                    <span class="author">Song by Anirudh Ravichander</span>
+                                    <audio   class="${allMusics[i].src}" src="musics/${allMusics[i].src}.mp3"></audio>
+                                    </div>
+                                    <div class="music-dur">
+                                    <span id="${allMusics[i].src}" class="audioDurations">00:00</span> 
+                                    </div> 
+                                    </div>
+                            </li>
+                            
+                         
+                            <li class="product">
+                                <div class="value">
+                                    <h5>Kaathuvaakula Rendu Kaadhal Tamil mp3 song</h5>
+                                    <span class="author">Song by Anirudh Ravichander</span>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="value">
+                                    <h5>Let Me Down Slowly</h5>
+                                    <span class="author">Song by Alec Benjamin</span>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="value">
+                                <h5>Rendu Kaadhal</h5>
+                                <span class="author">Calm Down</span>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="value">
+                                    <h5>Rendu Kaadhal</h5>
+                                    <span class="author">Kanave Kanave</span>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="value">
+                                    <h5>Katchi Sera</h5>
+                                    <span class="author">Song by Sai Abhyankkar</span>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="value">
+                                <h5>Jimikki Ponnu</h5>
+                                <span class="author">Song by Anirudh Ravichander</span>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="value">
+                                <h5>Vaarayo Vaarayo</h5>
+                                <span class="author">Song by Harris Jayaraj</span>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="value">
+                                <h5>Venmegam Pennaga</h5>
+                                <span  class="author">Song by Hariharan</span>
+                               </div>
+                             </li> 
+                          -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                
+                <div class="buttons-nav">
+               
+                    <div class="main-buttons">
+                        <span class="backward"><i class="fa-solid fa-backward"></i></span>
+                        <span class="stop"><i class="fa-solid fa-square-full"></i></span>
+                        <span class="play-pause"><span class="circle-play"><i class="fa-regular fa-circle-play"></i></span> <span class="circlePause"><i class="fa-regular fa-circle-pause"></i></span></span>
+                        <span class="pause"><i class="fa-solid fa-pause"></i></span> 
+                        <span class="forward"><i class="fa-solid fa-forward"></i></span>
+                    </div>
+                    <div class="side-buttons">
+                        <span><i id="repeat-plist" class="material-icons shuffle" title="Playlist looped">repeat</i></span>
+                        <span><i id="shuffle-plist" class="material-icons blows" title="Playlist looped">shuffle</i></span>
+                        <!--<span class="repeat"> <span class="ones"><i class="bi bi-repeat" title="repeat"></i></span> <span class="repeat-1"><i class="bi bi-repeat-1" title="repeat once"></i></span></span>
+                        <span class="shuffle"><i class="fa-solid fa-shuffle"></i></span>
+                        -->
+                    </div>
+                </div>
+                <div class="status-bar">
+                    <div class="music-time">
+                        <span class="currenttime">00:00</span>
+                        <span class="totaltime">00:00</span>
+                    </div>
+                    <div class="range-bar" id="waveform">
+                      <input type="range" class="music-range" min="0"   >
+                    </div>
+                    <audio   class="audio-form" src=""></audio>
+                    <div class="volume-button">
+                        <span class="volume "><span class="volume-up"><i class="fa-solid fa-volume-high"></i></span><span class="volume-mute"><i class="fa-solid fa-volume-xmark"></i> </span></span>
+                        <input type="range" class="volume-range"  >
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+     
+    <script src="js/musicklist.js"></script>
+    <script src="main.js"></script>
+     
+
+</body>
+</html>
